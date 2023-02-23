@@ -1,7 +1,7 @@
 import constant, os, random, time, tkinter as tk, ctypes
 from tkinter import *
 from tkinter import messagebox
- 
+
 # creating Tk window
 root = Tk()
 root.title("Time Counter")
@@ -79,12 +79,12 @@ def countdown():
         temp -= 1
  
 # button widget
-# countdown()
+countdown()
   
 # infinite loop which is required to
 # run tkinter program infinitely
 # until an interrupt occurs
-# root.mainloop()
+root.mainloop()
 
 
 # files = os.listdir(constant.FILES_FOLDER)
