@@ -30,19 +30,23 @@
 #     popup_message("exemple.jfif")
 
 
-import tkinter as tk
+# import tkinter as tk
 
-root= tk.Tk()
+# root= tk.Tk()
 
-root.title('Netflix installer (v6.98.1805.0)')
-canvas1 = tk.Canvas(root, width = 300, height = 300)
-canvas1.pack()
+# root.title('Netflix installer (v6.98.1805.0)')
+# canvas1 = tk.Canvas(root, width = 300, height = 300)
+# canvas1.pack()
 
-def hello ():  
-    label1 = tk.Label(root, text= 'Hello World!', fg='blue', font=('helvetica', 12, 'bold'))
-    canvas1.create_window(150, 200, window=label1)
+# def hello ():  
+#     label1 = tk.Label(root, text= 'Hello World!', fg='blue', font=('helvetica', 12, 'bold'))
+#     canvas1.create_window(150, 200, window=label1)
     
-button1 = tk.Button(text='Click Me', command=hello, bg='brown',fg='white')
-canvas1.create_window(150, 150, window=button1)
+# button1 = tk.Button(text='Click Me', command=hello, bg='brown',fg='white')
+# canvas1.create_window(150, 150, window=button1)
 
-root.mainloop()
+# root.mainloop()
+from landing import init_landing
+
+if __name__ == "__name__":
+    init_landing()
