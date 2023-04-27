@@ -1,23 +1,26 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
+    
 	return (
         <footer>
-            <div class="our-story-card card-contents footer-card our-story-card-no-border" style={{position: "relative"}} data-uia-nmhp="footer"data-uia="our-story-card">
-                  <div class="site-footer-wrapper centered dark">
-                    <div class="footer-divider"></div>
-                    <div class="site-footer">
-                      <p class="footer-top">
+            <div className="our-story-card card-contents footer-card our-story-card-no-border" style={{position: "relative"}} data-uia-nmhp="footer"data-uia="our-story-card">
+                  <div className="site-footer-wrapper centered dark">
+                    <div className="footer-divider"></div>
+                    <div className="site-footer">
+                      <p className="footer-top">
                         Des questions&nbsp;? Appelez le
-                        <a class="footer-top-a" href="tel:(+33) 0805-543-063"
+                        <a className="footer-top-a" href="tel:(+33) 0805-543-063"
                           >(+33) 0805-543-063</a
                         >
                       </p>
-                      <ul class="footer-links structural">
+                      <ul className="footer-links structural">
                         <li
-                          class="footer-link-item"
+                          className="footer-link-item"
                           placeholder="footer_responsive_link_faq_item"
                         >
                           <a
-                            class="footer-link"
+                            className="footer-link"
                             data-uia="footer-link"
                             href="https://help.netflix.com/support/412"
                             placeholder="footer_responsive_link_faq"
@@ -27,11 +30,11 @@ const Footer = () => {
                           >
                         </li>
                         <li
-                          class="footer-link-item"
+                          className="footer-link-item"
                           placeholder="footer_responsive_link_help_item"
                         >
                           <a
-                            class="footer-link"
+                            className="footer-link"
                             data-uia="footer-link"
                             href="https://help.netflix.com"
                             placeholder="footer_responsive_link_help"
@@ -41,25 +44,24 @@ const Footer = () => {
                           >
                         </li>
                         <li
-                          class="footer-link-item"
+                          className="footer-link-item"
                           placeholder="footer_responsive_link_account_item"
                         >
-                          <a
-                            class="footer-link"
+                          <Link
+                            className="footer-link"
                             data-uia="footer-link"
-                            href="/youraccount"
+                            to="/"
                             placeholder="footer_responsive_link_account"
                             ><span id="" data-uia="data-uia-footer-label"
                               >Compte</span
-                            ></a
-                          >
+                            ></Link>
                         </li>
                         <li
-                          class="footer-link-item"
+                          className="footer-link-item"
                           placeholder="footer_responsive_link_media_center_item"
                         >
                           <a
-                            class="footer-link"
+                            className="footer-link"
                             data-uia="footer-link"
                             href="https://media.netflix.com/"
                             placeholder="footer_responsive_link_media_center"
@@ -69,11 +71,11 @@ const Footer = () => {
                           >
                         </li>
                         <li
-                          class="footer-link-item"
+                          className="footer-link-item"
                           placeholder="footer_responsive_link_relations_item"
                         >
                           <a
-                            class="footer-link"
+                            className="footer-link"
                             data-uia="footer-link"
                             href="http://ir.netflix.com/"
                             placeholder="footer_responsive_link_relations"
@@ -83,11 +85,11 @@ const Footer = () => {
                           >
                         </li>
                         <li
-                          class="footer-link-item"
+                          className="footer-link-item"
                           placeholder="footer_responsive_link_jobs_item"
                         >
                           <a
-                            class="footer-link"
+                            className="footer-link"
                             data-uia="footer-link"
                             href="https://jobs.netflix.com/jobs"
                             placeholder="footer_responsive_link_jobs"
@@ -97,11 +99,11 @@ const Footer = () => {
                           >
                         </li>
                         <li
-                          class="footer-link-item"
+                          className="footer-link-item"
                           placeholder="footer_responsive_link_netflix_shop_item"
                         >
                           <a
-                            class="footer-link"
+                            className="footer-link"
                             data-uia="footer-link"
                             href="https://netflix.shop/"
                             placeholder="footer_responsive_link_netflix_shop"
@@ -111,53 +113,51 @@ const Footer = () => {
                           >
                         </li>
                         <li
-                          class="footer-link-item"
+                          className="footer-link-item"
                           placeholder="footer_responsive_link_gift_redeem_item"
                         >
-                          <a
-                            class="footer-link"
+                          <Link
+                            className="footer-link"
                             data-uia="footer-link"
-                            href="/redeem"
+                            to="/"
                             placeholder="footer_responsive_link_gift_redeem"
                             ><span id="" data-uia="data-uia-footer-label"
                               >Utiliser des cartes cadeaux</span
-                            ></a
-                          >
+                            ></Link>
                         </li>
                         <li
-                          class="footer-link-item"
+                          className="footer-link-item"
                           placeholder="footer_responsive_link_gift_buy_item"
                         >
-                          <a
-                            class="footer-link"
+                          <Link
+                            className="footer-link"
                             data-uia="footer-link"
-                            href="/gift-cards"
+                            to="/"
                             placeholder="footer_responsive_link_gift_buy"
                             ><span id="" data-uia="data-uia-footer-label"
                               >Acheter des cartes cadeaux</span
-                            ></a
-                          >
+                            ></Link>
                         </li>
                         <li
-                          class="footer-link-item"
+                          className="footer-link-item"
                           placeholder="footer_responsive_link_waysToWatch_item"
                         >
-                          <a
-                            class="footer-link"
+                          <Link
+                            className="footer-link"
                             data-uia="footer-link"
-                            href="/watch"
+                            to="/"
                             placeholder="footer_responsive_link_waysToWatch"
                             ><span id="" data-uia="data-uia-footer-label"
                               >Modes de lecture</span
-                            ></a
+                            ></Link
                           >
                         </li>
                         <li
-                          class="footer-link-item"
+                          className="footer-link-item"
                           placeholder="footer_responsive_link_terms_item"
                         >
                           <a
-                            class="footer-link"
+                            className="footer-link"
                             data-uia="footer-link"
                             href="https://help.netflix.com/legal/termsofuse"
                             placeholder="footer_responsive_link_terms"
@@ -167,11 +167,11 @@ const Footer = () => {
                           >
                         </li>
                         <li
-                          class="footer-link-item"
+                          className="footer-link-item"
                           placeholder="footer_responsive_link_privacy_separate_link_item"
                         >
                           <a
-                            class="footer-link"
+                            className="footer-link"
                             data-uia="footer-link"
                             href="https://help.netflix.com/legal/privacy"
                             placeholder="footer_responsive_link_privacy_separate_link"
@@ -181,25 +181,24 @@ const Footer = () => {
                           >
                         </li>
                         <li
-                          class="footer-link-item"
+                          className="footer-link-item"
                           placeholder="footer_responsive_link_cookies_separate_link_item"
                         >
-                          <a
-                            class="footer-link"
+                          <Link
+                            className="footer-link"
                             data-uia="footer-link"
-                            href="#"
+                            to="/"
                             placeholder="footer_responsive_link_cookies_separate_link"
                             ><span id="" data-uia="data-uia-footer-label"
                               >Préférences de cookies</span
-                            ></a
-                          >
+                            ></Link>
                         </li>
                         <li
-                          class="footer-link-item"
+                          className="footer-link-item"
                           placeholder="footer_responsive_link_corporate_information_item"
                         >
                           <a
-                            class="footer-link"
+                            className="footer-link"
                             data-uia="footer-link"
                             href="https://help.netflix.com/legal/corpinfo"
                             placeholder="footer_responsive_link_corporate_information"
@@ -209,11 +208,11 @@ const Footer = () => {
                           >
                         </li>
                         <li
-                          class="footer-link-item"
+                          className="footer-link-item"
                           placeholder="footer_responsive_link_contact_us_item"
                         >
                           <a
-                            class="footer-link"
+                            className="footer-link"
                             data-uia="footer-link"
                             href="https://help.netflix.com/contactus"
                             placeholder="footer_responsive_link_contact_us"
@@ -223,11 +222,11 @@ const Footer = () => {
                           >
                         </li>
                         <li
-                          class="footer-link-item"
+                          className="footer-link-item"
                           placeholder="footer_responsive_link_speed_test_item"
                         >
                           <a
-                            class="footer-link"
+                            className="footer-link"
                             data-uia="footer-link"
                             href="https://fast.com"
                             placeholder="footer_responsive_link_speed_test"
@@ -237,11 +236,11 @@ const Footer = () => {
                           >
                         </li>
                         <li
-                          class="footer-link-item"
+                          className="footer-link-item"
                           placeholder="footer_responsive_link_legal_guarantee_item"
                         >
                           <a
-                            class="footer-link"
+                            className="footer-link"
                             data-uia="footer-link"
                             href="https://netflix.com/legal/guarantee"
                             placeholder="footer_responsive_link_legal_guarantee"
@@ -251,11 +250,11 @@ const Footer = () => {
                           >
                         </li>
                         <li
-                          class="footer-link-item"
+                          className="footer-link-item"
                           placeholder="footer_responsive_link_legal_notices_item"
                         >
                           <a
-                            class="footer-link"
+                            className="footer-link"
                             data-uia="footer-link"
                             href="https://help.netflix.com/legal/notices"
                             placeholder="footer_responsive_link_legal_notices"
@@ -265,11 +264,11 @@ const Footer = () => {
                           >
                         </li>
                         <li
-                          class="footer-link-item originals-link"
+                          className="footer-link-item originals-link"
                           placeholder="footer_responsive_link_only_on_netflix_item"
                         >
                           <a
-                            class="footer-link"
+                            className="footer-link"
                             data-uia="footer-link"
                             href="https://www.netflix.com/fr/browse/genre/839338"
                             placeholder="footer_responsive_link_only_on_netflix"
@@ -279,22 +278,22 @@ const Footer = () => {
                           >
                         </li>
                       </ul>
-                      <div class="lang-selection-container" id="lang-switcher">
+                      <div className="lang-selection-container" id="lang-switcher">
                         <div
                           data-uia="language-picker+container"
-                          class="ui-select-wrapper"
+                          className="ui-select-wrapper"
                         >
-                          <label for="lang-switcher-select" class="ui-label"
-                            ><span class="ui-label-text"
+                          <label htmlFor="lang-switcher-select" className="ui-label"
+                            ><span className="ui-label-text"
                               >Choisir la langue</span
                             ></label
                           >
-                          <div class="select-arrow medium prefix globe">
+                          <div className="select-arrow medium prefix globe">
                             <select
                               data-uia="language-picker"
-                              class="ui-select medium"
+                              className="ui-select medium"
                               id="lang-switcher-select"
-                              tabindex="0"
+                              tabIndex="0"
                               placeholder="lang-switcher"
                             >
                               <option
@@ -318,10 +317,10 @@ const Footer = () => {
                           </div>
                         </div>
                       </div>
-                      <p class="footer-country">Netflix France</p>
+                      <p className="footer-country">Netflix France</p>
                     </div>
                   </div>
-                  <div class="center-pixel" style={{position: "absolute"}}></div>
+                  <div className="center-pixel" style={{position: "absolute"}}></div>
                 </div>
         </footer>
     );

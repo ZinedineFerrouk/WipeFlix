@@ -9,13 +9,13 @@ const App = () => {
 
     return <div id="appMountPoint">
     {
-        location.pathname != "/login" ? 
+        location.pathname !== "/login" ? 
         (
-            <div class="basicLayout">
-                <div class="netflix-sans-font-loaded">
-                    <div class="our-story-desktop-framework adsplan-banner-enabled">
+            <div className="basicLayout">
+                <div className="netflix-sans-font-loaded">
+                    <div className="our-story-desktop-framework adsplan-banner-enabled">
                         <div>
-                            <div class="our-story-container" dir="ltr">
+                            <div className="our-story-container" dir="ltr">
                                 <Header/>
                                 <Outlet/>
                                 <Footer/>
